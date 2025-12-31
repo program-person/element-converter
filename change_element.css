@@ -1,0 +1,192 @@
+header h1{
+    margin:0;
+    font-size:60px;
+    letter-spacing:2px;
+}
+
+header h1 span{
+    color: #4facfe;
+}
+header p{
+    margin-top:10px;
+    opacity:0.9;
+}
+
+#note{
+    font-size: 18px;
+    color:black;
+    font-style:bold;
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-family:"Helvetica Neue", Arial,"Hiragino Kaku Gothic ProN", sans-serif;
+    background-color: #f0f4f8;
+    color:#333;
+    line-height:1.6;
+}
+
+header{
+    background:linear-gradient(135deg,#1e3c72 0%, #2a5298 100%);
+    color:white;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+main{
+    max-width:900px;
+    margin: -40px auto 40px ;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.input-section{
+    margin-bottom: 40px;
+}
+
+.input-section label{
+    display:block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color:#555;
+}
+
+.input-group{
+    display:flex;
+    gap:10px;
+}
+
+input[type = "text"]{
+    flex:1;
+    padding:15px;
+    border: 2px solid #ddd;
+    border-radius:10px;
+    font-size:18px;
+    transition:border-color 0.3s;
+}
+
+input[type = "text"]:focus{
+    border-color:#2a5298;
+    outline:none;
+}
+
+button{
+    padding: 10px 30px;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    background: #2a5298;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border:none;
+    box-shadow:0 4px 0 #1a3666;
+}
+
+button:hover{
+    background:#3a62a8;
+    transform: translateY(-2px);
+    box-shadow:0 6px 0 #1a3666;
+}
+
+button:active{
+    transform: translateY(2px);
+    box-shadow:0 0 0;
+}
+
+.result-section{
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 15px;
+    min-height: 100px;
+    border:1px dashed #cbd5e1;
+    margin-bottom: 30px;
+}
+#resultarea{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/*複数候補があるときの要素の親*/
+.element-container{
+    position:relative;/*子要素の基準になる*/
+    padding: 8px 15px;
+    cursor: pointer;
+    padding:5px 10px;
+    background:white;
+    border-bottom: 2px dashed #007bff;/*候補があるときの目印*/
+    border-radius:8px;
+    border: 2px solid #2a5298;
+    color: #2a5298;
+}
+
+/*ホバー時の名前の背景色*/
+.element-container:hover{
+    background-color:#2a5298;
+    background:white;
+}
+
+/*隠れているリスト*/
+.dropdown-list{
+    display:none;/*初期状態では非表示*/
+    position:absolute;
+    top:100%;/*親要素の下に配置*/
+    left:0;
+    background-color:white;
+    border:1px solid #ccc;
+    box-shadow:0 8px 16px rgba(0,0,0,0.2);
+    z-index:10;
+    min-width:120px;
+    max-width:4px;
+    border-radius:4px;
+}
+
+/*親がホバーされればリストを表示*/
+.element-container:hover .dropdown-list{
+    display: block;
+}
+
+/*リスト内の各項目*/
+.dropdown-item{
+    padding:10px;
+    color: #333;
+    font-size:16px;
+}
+.dropdown-item:hover{
+    background-color:#f1f1f1;
+    color: #007bff;
+}
+
+/*候補が 一つしかない要素*/
+.single-element{
+    font-weight: bold;
+}
+
+#note{
+    font-size: 16px;
+    color:#666;
+    background:#fff9db;
+    padding:20px;
+    border-radius:10px;
+    margin-top:20px;
+}
+
+footer{
+    text-align: center;
+    padding:40px 20px;
+    color:#888;
+    font-size: 14px;
+}
