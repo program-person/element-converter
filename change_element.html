@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <header>
+        <meta charset ="UTF-8">
+        <h1>Element<span>Converter</span></h1>
+        <p>ことばを元素記号に変換するツール</p>
+        <link rel="stylesheet" href="change_element.css">
+    </header>
+    <main>
+        <div class="input-section">
+            <label for="inputText">文章を入力してください(ローマ字半角入力にて入力してください):</label>
+            <div class="input-group">
+                <input type="text" id="input_text" placeholder="例: apple">
+                <button id="convert_button">変換する</button>
+            </div>
+        </div>
+        <div class="result-section">
+            <div id="result_area">ここに変換結果が表示されます:</div>
+        </div>
+        <div id="note">
+            <h3>注意事項</h3>
+            <p>元素周期表に存在しない単独のアルファベット(例：A・Eなど)はそれぞれを含んでいる元素記号に変換します。
+            青色点線が入っている元素の場所は複数の候補があるという意味です。カーソルを合わせると候補が表示されます。
+            </p>
+        </div>
+    </main>
+    <footer>
+        &copy; 2025 元素変換ツール
+    </footer>
+    <script src="change_element.js"></script>
+</html>
